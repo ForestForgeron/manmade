@@ -1,0 +1,22 @@
+<div id="container"></div>
+<button id="kek">click</button>
+<script>
+    const btn = document.getElementById("kek");
+    btn.addEventListener('click', lol);
+    function lol() {
+        fetch("http://gpay/", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: "TEEEST"
+        })
+            .then(response => response.json())
+            .then(res => console.log(res));
+    }
+</script>
+<script src="index2.js"></script>
+<script async
+        src="https://pay.google.com/gp/p/js/pay.js"
+        onload="onGooglePayLoaded()"></script>
